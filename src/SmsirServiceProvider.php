@@ -71,7 +71,7 @@ class SmsirServiceProvider extends ServiceProvider
 
         Notification::resolved(function (ChannelManager $service) {
             $service->extend('smsir', function ($app) {
-                return $this->app->make(SmsirChannel::class);
+                return $app->make(SmsirChannel::class);
             });
         });
     }
